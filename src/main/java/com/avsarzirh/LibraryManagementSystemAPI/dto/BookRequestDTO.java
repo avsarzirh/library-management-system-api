@@ -2,7 +2,7 @@ package com.avsarzirh.LibraryManagementSystemAPI.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
-public record BookCreateRequestDTO(
+public record BookRequestDTO(
         @NotBlank(message = "Book title cannot be empty.")
         String title,
 
