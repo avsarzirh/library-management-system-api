@@ -107,10 +107,7 @@ public class BorrowerService {
         }
 
         if (firstName.isBlank() && lastName.isBlank() && email.isBlank() && phoneNumber.isBlank()) {
-            return borrowerRepository.findAll()
-                    .stream()
-                    .map(this::mapBorrowerToBorrowerResponseDTO)
-                    .collect(Collectors.toSet());
+            borrowers.addAll(borrowerRepository.findAll());
         }
 
         return borrowers.stream().map(this::mapBorrowerToBorrowerResponseDTO).collect(Collectors.toSet());

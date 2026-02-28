@@ -38,6 +38,12 @@ public class BorrowerController {
         return ResponseEntity.ok(borrowerService.findBorrowerById(id));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<BorrowerResponseDTO> updateBorrowerById(@PathVariable Long id,
+                                                                  @RequestBody @Valid BorrowerRequestDTO dto) {
+        return ResponseEntity.ok(borrowerService.updateBorrowerById(id, dto));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBorrowerById(@PathVariable Long id) {
         borrowerService.deleteBorrowerById(id);
