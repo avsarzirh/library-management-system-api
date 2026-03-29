@@ -61,4 +61,3 @@ public class BorrowService {
         return Map.of("message", "Book returned to the library successfully.");
     }
 }
-

@@ -1,5 +1,6 @@
 package com.avsarzirh.LibraryManagementSystemAPI.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -36,5 +37,6 @@ public class Borrower {
     private LocalDate registrationDate;
 
     @OneToMany(mappedBy = "borrower")
+    @JsonIgnore
     private List<Borrow> borrows;
 }

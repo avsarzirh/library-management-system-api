@@ -3,7 +3,6 @@ package com.avsarzirh.LibraryManagementSystemAPI.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "t_borrow")
 
